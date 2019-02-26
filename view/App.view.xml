@@ -1,0 +1,18 @@
+
+<mvc:View controllerName="pfe.bot.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:controls="pfe.bot.controls" displayBlock="true" xmlns="sap.m">
+    <App id="idAppControl">
+        <pages>
+            <Page title="{i18n&gt;title}">
+                <footer>
+                    <Bar>
+                        <contentRight>
+                            <ToolbarSpacer width="" />
+                            <Button text="Chat with me" icon="sap-icon://discussion" tooltip="{i18n&gt;Clear}" press="onChatPress" />
+                            <controls:ChatDialog id="botchat" title="Hello Bot!" height="600px" width="350px" showCloseButton="false" send="onSendPressed" initialMessage="Hi, I am Hello Bot!. What can I help ?" placeHolder="Write a reply" userIcon="https://cdn.recast.ai/webchat/user.png" robotIcon="https://cdn.recast.ai/webchat/bot.png" buttonIcon="sap-icon://discussion"></controls:ChatDialog>
+                        </contentRight>
+                    </Bar>
+                </footer>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>
